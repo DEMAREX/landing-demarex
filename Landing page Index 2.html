@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEMAREX — Más que un Socio en el Origen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-teal: #36c7b8;
+      --primary-dark-teal: #22a092;
+      --bg-cream: #FCF9F1;
+      --text-dark: #4f5e6a;
+      --accent-brown: #8c6239;
+      --soft-teal: #e2f4f2;
+      --white: #ffffff;
+      --border-color: #e2e8f0;
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); color: var(--text-dark); background-color: var(--bg-cream); line-height: 1.6; }
+
+    /* Header Nav */
+    header {
+      position: sticky; top: 0; background: rgba(252, 249, 241, 0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 15px 5%;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-family: var(--font-title); font-size: 1.6rem; font-weight: 800; color: var(--primary-teal); text-decoration: none; }
+    .logo span { color: var(--accent-brown); font-size: 0.72rem; display: block; font-weight: 600; letter-spacing: 1.5px; }
+    nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.9rem; }
+    nav a:hover { color: var(--primary-teal); }
+    .btn-nav { background: var(--primary-teal); color: var(--white) !important; padding: 8px 18px; border-radius: 6px; font-weight: 600; transition: background 0.3s; }
+    .btn-nav:hover { background: var(--primary-dark-teal); }
+
+    /* Hero Section */
+    .hero { padding: 90px 5% 80px; text-align: center; background: linear-gradient(180deg, rgba(226, 244, 242, 0.5) 0%, rgba(252, 249, 241, 1) 100%); }
+    .badge { display: inline-block; background: var(--soft-teal); color: var(--primary-dark-teal); padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.5px; }
+    .hero h1 { font-family: var(--font-title); font-size: 2.8rem; font-weight: 800; max-width: 950px; margin: 0 auto 20px; line-height: 1.25; color: var(--text-dark); }
+    .hero h1 span { color: var(--primary-teal); }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin: 0 auto 35px; color: var(--text-dark); font-weight: 400; }
+    .hero-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    
+    .btn-primary { background: var(--primary-teal); color: var(--white); padding: 14px 30px; border-radius: 8px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(54, 199, 184, 0.35); transition: all 0.3s; }
+    .btn-primary:hover { background: var(--primary-dark-teal); transform: translateY(-2px); }
+    .btn-secondary { background: var(--white); color: var(--text-dark); border: 2px solid var(--border-color); padding: 14px 30px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+    .btn-secondary:hover { border-color: var(--primary-teal); color: var(--primary-teal); }
+
+    /* Sections General */
+    section { padding: 80px 5%; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-family: var(--font-title); font-size: 2.2rem; margin-bottom: 12px; }
+    .section-title h2 span { color: var(--primary-teal); }
+    .section-title p { font-size: 1.15rem; color: #64748b; max-width: 850px; margin: 0 auto; }
+
+    /* Riqueza Territorial */
+    .territory-section { background: var(--white); border-y: 1px solid var(--border-color); }
+    .territory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+    .territory-card { background: var(--bg-cream); padding: 30px; border-radius: 12px; border-left: 5px solid var(--primary-teal); }
+    .territory-card h3 { font-family: var(--font-title); font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); }
+
+    /* Modelo de Impacto (Las 6 Cajas de las imágenes) */
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+    .impact-card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--primary-teal); box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: transform 0.3s; }
+    .impact-card:hover { transform: translateY(-4px); }
+    .impact-card h3 { font-family: var(--font-title); font-size: 1.25rem; margin-bottom: 10px; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
+    .impact-card p { font-size: 0.98rem; color: #64748b; }
+
+    /* Oferta Diversificada */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+    .portfolio-card { background: var(--white); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); transition: transform 0.3s; }
+    .portfolio-card:hover { transform: translateY(-5px); }
+    .portfolio-header { background: var(--primary-teal); color: var(--white); padding: 18px 20px; font-family: var(--font-title); font-weight: 700; font-size: 1.1rem; }
+    .portfolio-body { padding: 22px; }
+    .portfolio-body ul { list-style: none; }
+    .portfolio-body li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 0.95rem; }
+    .portfolio-body li::before { content: "•"; position: absolute; left: 0; color: var(--primary-teal); font-weight: bold; font-size: 1.4rem; line-height: 1; }
+
+    /* Alianza Dual */
+    .dual-section { background: linear-gradient(180deg, #f4f7f6 0%, var(--bg-cream) 100%); }
+    .dual-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+    .audience-card { background: var(--white); padding: 40px 30px; border-radius: 16px; border: 1px solid var(--border-color); }
+    .audience-card.buyer { border-top: 6px solid var(--primary-teal); }
+    .audience-card.supplier { border-top: 6px solid var(--accent-brown); }
+    .audience-card h3 { font-family: var(--font-title); font-size: 1.5rem; margin-bottom: 15px; }
+
+    /* Cierre & Contacto Humano */
+    .cta-section { background: var(--text-dark); color: var(--white); text-align: center; padding: 80px 5%; }
+    .cta-container { max-width: 850px; margin: 0 auto; }
+    .cta-container h2 { font-family: var(--font-title); font-size: 2.3rem; color: var(--white); margin-bottom: 18px; }
+    .cta-container p { font-size: 1.15rem; margin-bottom: 35px; color: #cbd5e1; font-weight: 300; }
+    .contact-card { background: rgba(255, 255, 255, 0.08); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.15); display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: left; margin-top: 35px; }
+    .contact-item label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-teal); display: block; margin-bottom: 4px; }
+    .contact-item span, .contact-item a { color: var(--white); text-decoration: none; font-weight: 600; }
+
+    footer { background: #1a202c; color: #94a3b8; padding: 25px 5%; text-align: center; font-size: 0.85rem; border-top: 1px solid #2d3748; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.1rem; }
+      header { flex-direction: column; gap: 15px; }
+      nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación Principal -->
+  <header>
+    <a href="#" class="logo">
+      DEMAREX
+      <span>EL VALOR DEL ORIGEN PERUANO</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#origen">Territorio</a></li>
+        <li><a href="#modelo">Modelo de Impacto</a></li>
+        <li><a href="#oferta">Oferta Exportable</a></li>
+        <li><a href="#alianza">Trabajemos Juntos</a></li>
+        <li><a href="#contacto" class="btn-nav">Conectar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="badge">Articulación en Origen & Impacto Integrado</span>
+    <h1>Conectamos las <span>Manos y la Geografía del Perú</span> con el Mercado Global</h1>
+    <p>DEMAREX es el puente transparente entre las comunidades productoras, los talleres artesanales y los mercados internacionales. Honramos la diversidad territorial de nuestro país haciendo posible un comercio justo, directo y trazable.</p>
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-primary">Agendar una Reunión</a>
+      <a href="#alianza" class="btn-secondary">Unirse a la Red DEMAREX</a>
+    </div>
+  </section>
+
+  <!-- Más que un Socio en el Origen -->
+  <section id="origen" class="territory-section">
+    <div class="section-title">
+      <h2>Más que un <span>Socio en el Origen</span></h2>
+      <p>DEMAREX opera directamente en campo para construir cadenas de suministro confiables y trazables entre productores peruanos y compradores internacionales.</p>
+    </div>
+
+    <div class="territory-grid">
+      <div class="territory-card">
+        <h3>Pisos Ecológicos Únicos</h3>
+        <p>Albergamos 84 de las 117 zonas de vida del planeta. Esta riqueza microclimática nos permite cosechar y producir con atributos organolépticos extraordinarios durante todo el año.</p>
+      </div>
+      <div class="territory-card">
+        <h3>Legitimidad en el Origen</h3>
+        <p>Cada producto lleva la firma de la familia agricultora o del taller artesanal. Visibilizamos y protegemos la identidad de quienes cultivan y crean en origen.</p>
+      </div>
+      <div class="territory-card">
+        <h3>Tradición e Innovación</h3>
+        <p>Unimos saberes ancestrales de manejo de suelos y técnicas de tejido con estándares tecnológicos de trazabilidad, sanidad e inocuidad internacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modelo Comercial de Desarrollo Sostenible (6 Pilares) -->
+  <section id="modelo">
+    <div class="section-title">
+      <h2>Contribuciones Medibles al <span>Desarrollo Sostenible</span></h2>
+      <p>Nuestro modelo comercial integra contribuciones reales y auditables directamente en la cadena de valor.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <h3>👨‍👩‍👧‍👦 Nutrición Infantil</h3>
+        <p>Programas de alimentación y salud en comunidades productoras.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>💼 Desarrollo Económico</h3>
+        <p>Generación de empleo local y acceso a mercados premium.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>👩‍🌾 Empoderamiento</h3>
+        <p>Capacitación empresarial y participación en decisiones de cadena.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>🌲 Reforestación</h3>
+        <p>Proyectos de recuperación de bosques en zonas de cultivo.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>🌱 Agricultura Sostenible</h3>
+        <p>Transición a prácticas agroecológicas sin comprometer productividad.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>📊 Impacto Medible</h3>
+        <p>Reportes de sostenibilidad con terceros independientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio de Oferta Agroalimentaria y Artesanal -->
+  <section id="oferta">
+    <div class="section-title">
+      <h2>Nuestra <span>Oferta Territorial</span></h2>
+      <p>Productos con historia, identidad y alineamiento riguroso con los estándares exigidos en destino.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-header">Café de Especialidad</div>
+        <div class="portfolio-body">
+          <ul>
+            <li>Lotes SCA de alta montaña con perfiles diferenciados en taza.</li>
+            <li>Trazabilidad radical a finca georreferenciada.</li>
+            <li>Conformidad estricta con la normativa europea antideforestación (EUDR).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-header">Frutas Frescas Premium</div>
+        <div class="portfolio-body">
+          <ul>
+            <li>Uvas de Mesa, Arándanos Jumbo, Palta Hass y Cítricos.</li>
+            <li>Soporte agronómico en campo con nuestro aliado <strong>AGRO ADRO</strong>.</li>
+            <li>Disciplina técnica en origen para consistencia y calidad de llegada.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-header">Superfoods & Cacao</div>
+        <div class="portfolio-body">
+          <ul>
+            <li>Cacao de origen, granos andinos y biodiversidad agrícola.</li>
+            <li>Garantía de límites químicos y residuos (LMRs) para mercados exigentes.</li>
+            <li>Inversión en tecnologías de procesamiento limpio en finca.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-header">Artesanía & Identidad</div>
+        <div class="portfolio-body">
+          <ul>
+            <li>Línea textil en fibras naturales (Alpaca y Algodón nativo).</li>
+            <li>Trazabilidad de taller comunitario y comercio justo real.</li>
+            <li>Preservación del patrimonio cultural e identidad comunitaria.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Dual: Tejiendo Redes -->
+  <section id="alianza" class="dual-section">
+    <div class="section-title">
+      <h2>Construyamos <span>Juntos</span></h2>
+      <p>Articulamos la capacidad productiva del Perú con las expectativas de los clientes globales.</p>
+    </div>
+
+    <div class="dual-grid">
+      <div class="audience-card buyer">
+        <h3>Para Compradores e Importadores</h3>
+        <p style="margin-bottom: 20px; color: #64748b;">Acceda a una oferta diversa y genuina respaldada por trazabilidad, continuidad de volumen y ética comercial.</p>
+        <ul style="list-style: none; margin-bottom: 25px;">
+          <li style="margin-bottom: 10px;">✓ Abastecimiento directo sin intermediación opaca.</li>
+          <li style="margin-bottom: 10px;">✓ Cumplimiento documental, sanitario y normativo garantizado.</li>
+          <li style="margin-bottom: 10px;">✓ Retorno social y ambiental auditable para su marca.</li>
+        </ul>
+        <a href="#contacto" class="btn-primary" style="display: block; text-align: center;">Solicitar Información Comercial</a>
+      </div>
+
+      <div class="audience-card supplier">
+        <h3>Para Productores, Cooperativas y Artesanos</h3>
+        <p style="margin-bottom: 20px; color: #64748b;">Desarrolle sus capacidades para exportar con autonomía, dignidad y precios justos que valoren su esfuerzo.</p>
+        <ul style="list-style: none; margin-bottom: 25px;">
+          <li style="margin-bottom: 10px;">✓ Asistencia técnica en campo y control de calidad.</li>
+          <li style="margin-bottom: 10px;">✓ Acceso estructurado a mercados de alto valor.</li>
+          <li style="margin-bottom: 10px;">✓ Fortalecimiento organizacional y transparencia total.</li>
+        </ul>
+        <a href="#contacto" class="btn-secondary" style="display: block; text-align: center;">Sumar mi Organización</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cierre exacto de tu tercera imagen -->
+  <section id="contacto" class="cta-section">
+    <div class="cta-container">
+      <h2>Construyamos una Cadena de Suministro con Impacto</h2>
+      <p>Descubra cómo DEMAREX puede fortalecer su estrategia de abastecimiento y generar valor compartido desde el origen.</p>
+
+      <a href="mailto:mdenegri@demarex.net?subject=Contacto%20Desde%20Landing%20Page%20DEMAREX" class="btn-primary" style="font-size: 1.1rem; padding: 16px 36px;">Agendar una Reunión</a>
+
+      <div class="contact-card">
+        <div class="contact-item">
+          <label>Liderazgo & Alianzas</label>
+          <span>Maritza Denegri — Gerente General</span>
+        </div>
+        <div class="contact-item">
+          <label>Correo Electrónico</label>
+          <a href="mailto:mdenegri@demarex.net">mdenegri@demarex.net</a>
+        </div>
+        <div class="contact-item">
+          <label>Ubicación & Cobertura</label>
+          <span>Lima & Regiones de Origen, Perú</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>DEMAREX © 2026 | Plataforma de Articulación en Origen, Sourcing de Especialidad e Impacto Integrado</p>
+    <p style="margin-top: 5px; font-size: 0.8rem;">Lima, Perú</p>
+  </footer>
+
+</body>
+</html>
